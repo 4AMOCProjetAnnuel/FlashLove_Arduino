@@ -13,9 +13,7 @@ install:
 script:
 - platformio run
 notifications:
-  slack:
-    on_success: always
-    on_failure: always
+  slack: flashlove-bigteam:UgilKn41D2kjbInb5AAOYSyM
 before_install:
 - openssl aes-256-cbc -K $encrypted_44f46154b3fc_key -iv $encrypted_44f46154b3fc_iv
   -in settings.sh.enc -out settings.sh -d
