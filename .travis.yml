@@ -9,6 +9,10 @@ env:
 
 install:
   - pip install  -U platformio
+  - platformio update
+
+script:
+  - platformio run
 
 notifications:
   slack:
