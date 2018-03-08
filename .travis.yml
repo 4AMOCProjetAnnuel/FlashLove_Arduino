@@ -9,7 +9,7 @@ env:
     secure: UjyMOUVgb4uM6w3iZonmM2Qq8CPlG32wLIduilkHw0Edx7wZ7hPbkSaq5X3FF0rEaUprb6IPRjuqkda1QTA4SCQV5uisWQewa4sCynXKCW8WjThiOHRjTGelqtj5wgfHN6PCYmBpDzUZPRTcXi/yV3+4fjMZBrFWRX2jy7QdUboFbPG6eMmmXr9ku5+N37ujcBJ/FUdunsbrriq48Kxsynm9agvVs2lwb3oisIa8ytLQ8z5s9sfjiCLH+aIirC6Ig4pWTOJxbI/rC+vmWqW0btz+GCkaWWPDflsvTwOaSPWupbqlv1uh36WamX2XqK9r/cX2eqb/+ZF/q1ph8WMvzqC+YfgUDFP9IIRJ8DTsAjGHOYZLoRFOOM+XnjuQOsLGWfx1QCwYBfkJVFkFDe7Dcy4ncnk50VKIMioDr41kuX/8hYcrIBmQiiKq7oo4KHFh1zslRDSs0RTtCRkDtgXSef+vaQpIremeseDOkvZlcfE0r6bV3n1pfqK9I1vz+fwCZWJFQhAAB3sjIyS+YN78w20+7bGQkBCVWD6Gcb8AmMW5HUqcucA8yUDne/e27kS5D+29+8+AcNi1pTaflg43UdodaVXMKcTsJ/sZeYuLSMcTrtcFkayJhDdoh7VDEOPkOcbT/rzJgZ2dRuukn7PnmLz3ZeKIUaxNULbr4kin5E4=
 install:
 - pip install  -U platformio
-#- platformio lib install "WiFiManager"
+- platformio lib install "WiFiManager"
 - platformio update
 script:
 #- platformio run
