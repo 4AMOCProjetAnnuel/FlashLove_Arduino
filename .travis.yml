@@ -12,7 +12,7 @@ install:
 - platformio update
 
 before_script:
-  - platformio lib install "WiFiManager"
+  - platformio lib install "WifiManager"
 
 script:
 #- platformio run
