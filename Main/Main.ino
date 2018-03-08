@@ -1,22 +1,22 @@
-/*
- *  This sketch sends data via HTTP GET requests to data.sparkfun.com service.
- *
- *  You need to get streamId and privateKey at data.sparkfun.com and paste them
- *  below. Or just customize this script to talk to other HTTP servers.
- *
- */
-
 #include <ESP8266WiFi.h>
+#include <DNSServer.h>
+#include <ESP8266WebServer.h>
+#include <WiFiManager.h>
 
 void setup() {
-  Serial.begin(115200);
-  
-}
 
+  Serial.begin(115200);
+
+  WiFiManager wifiManager;
+
+  wifiManager.resetSettings();
+
+  wifiManager.autoConnect("FlashLoveAutoConnect");
+
+  Serial.println("CONNECTION SUCCESSFULLY DONE");
+}
 
 void loop() {
-  Serial.println("HELLO");
-  
-  delay(200);
+  Serial.println("HELLO WORLD");
+  delay(2000);
 }
-
