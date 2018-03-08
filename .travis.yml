@@ -12,11 +12,11 @@ install:
 - platformio update
 
 before_script:
-  - platformio lib install "WifiManager"
+  - platformio lib install
 
 script:
-#- platformio run
-- platformio ci --board=d1_mini
+- platformio run
+#- platformio ci --board=d1_mini
 
 notifications:
   slack: flashlove-bigteam:UgilKn41D2kjbInb5AAOYSyM
