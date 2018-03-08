@@ -11,7 +11,8 @@ install:
 - pip install  -U platformio
 - platformio update
 script:
-- platformio run
+#- platformio run
+- platformio ci --board=d1_mini
 notifications:
   slack: flashlove-bigteam:UgilKn41D2kjbInb5AAOYSyM
 before_install:
