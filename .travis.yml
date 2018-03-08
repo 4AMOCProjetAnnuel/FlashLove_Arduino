@@ -11,11 +11,9 @@ install:
 - pip install  -U platformio
 - platformio update
 
-before_script:
-  - platformio lib install
-
 script:
-- platformio run
+  - platformio install 567
+  - platformio run
 #- platformio ci --board=d1_mini
 
 notifications:
