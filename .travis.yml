@@ -12,7 +12,7 @@ install:
 - platformio update
 
 script:
-  - platformio install 567
+  - platformio lib install 567
   - platformio run
 #- platformio ci --board=d1_mini
 
