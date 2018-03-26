@@ -13,6 +13,8 @@ install:
 
 script:
   - platformio lib install 567
+  - pio lib install "ESP8266 QRcode"
+  - pio lib install "ESP8266_SSD1306"
   - platformio run
 #- platformio ci --board=d1_mini
 
