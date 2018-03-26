@@ -1,5 +1,5 @@
-.pioenvs
-.piolibdeps
-settings.sh
 .clang_complete
+settings.sh
 .gcc-flags.json
+.pioenvs/
+.piolibdeps/
