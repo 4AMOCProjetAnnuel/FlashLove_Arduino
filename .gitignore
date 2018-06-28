@@ -3,3 +3,5 @@ settings.sh
 .gcc-flags.json
 .pioenvs/
 .piolibdeps/
+.pioenvs
+.piolibdeps
