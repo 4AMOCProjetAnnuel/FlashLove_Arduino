@@ -5,7 +5,8 @@
 #include <LEDMatrixDriver.hpp>
 
 #include <Wire.h>
-#include "SSD1306.h"
+#include "SSD1306Wire.h"
+#include "OLEDDisplayUi.h"
 #include <qrcode.h>
 
 //LED HEART
@@ -17,9 +18,9 @@ LEDMatrixDriver lmd(LEDMATRIX_SEGMENTS, LEDMATRIX_CS_PIN);
 int values[LEDMATRIX_WIDTH];
 
 //OLED QrCode
-//21 & 22 are ESP connection pins
 //03xc is device I2C address
-SSD1306 display(0x3c, 21, 22);
+SSD1306Wire display(0x3c, D3, D5);
+OLEDDisplayUi ui  ( &display );
 QRcode qrcode (&display);
 
 //Pulse sensor
@@ -42,12 +43,13 @@ void setup() {
   */
 
   //OLED QrCode
-  /*
-  dispaly.init();
+  ui.setTargetFPS(60);
+  ui.init();
+  display.setContrast(100);
+  display.init();
   display.display();
   qrcode.init();
   qrcode.create("Hello World");
-  */
 
   //pulse sensor
   /*
@@ -55,12 +57,14 @@ void setup() {
   */
 
   //LEAD HEART
+  /*
   lmd.setEnabled(true);
   lmd.setIntensity(2);
 
   for(int i=0; i<LEDMATRIX_WIDTH; i++){
      values[i] = 1;
   }
+  */
 
 }
 
