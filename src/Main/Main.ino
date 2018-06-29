@@ -9,6 +9,8 @@
 #include "OLEDDisplayUi.h"
 #include <qrcode.h>
 
+#include <FirebaseArduino.h>
+
 //LED HEART
 const uint8_t LEDMATRIX_CS_PIN = 15;
 const int LEDMATRIX_WIDTH = 31;
@@ -29,6 +31,10 @@ int LED13 = 13;   //  The on-board Arduion LED
 int Signal;                // holds the incoming raw data. Signal value can range from 0-1024
 int Threshold = 550;            // Determine which Signal to "count as a beat", and which to ingore.
 
+//Firebase
+#define FIREBASE_HOST "flashloveapi.firebaseio.com"
+#define FIREBASE_AUTH "" // host is in .FirebaseSecretFile
+
 
 void setup() {
   Serial.begin(115200);
@@ -41,6 +47,13 @@ void setup() {
   wifiManager.autoConnect("FlashLuv","FlashLuv");
   Serial.println("CONNECTION SUCCESSFULLY DONE");
   */
+
+  //Firebase
+  Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
+  Serial.println("Ismaël uid is");
+  String uid = Firebase.getString("users/CcoWmeyrVOdetjH1rcwXiEduGYG3/uid");
+  Serial.println(uid);
+
 
   //OLED QrCode
   ui.setTargetFPS(60);

@@ -5,3 +5,4 @@ settings.sh
 .piolibdeps/
 .pioenvs
 .piolibdeps
+.FirebaseSecret
